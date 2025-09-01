@@ -1,0 +1,10 @@
+# .gitignore
+
+# Environment variables
+.env
+
+# Service Account Keys
+firebase-service-account.json
+
+node-modules
+node_modules
