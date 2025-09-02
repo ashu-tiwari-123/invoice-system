@@ -1,5 +1,5 @@
-import User from "../models/user.schema.js";
-import ApiError from "../utils/ApiError.js";
+import User from "./user.schema.js";
+import ApiError from "../../utils/ApiError.js";
 
 export const getOrCreateCurrentUser = async (req, res, next) => {
   try {

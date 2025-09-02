@@ -1,7 +1,7 @@
-import Customer from "../../models/catalog/customer.schema.js";
-import ApiError from "../../utils/ApiError.js";
-import ApiResponse from "../../utils/apiResponse.js";
-import asyncHandler from "../../utils/asyncHandler.js";
+import Customer from "./customer.schema.js";
+import ApiError from "../../../utils/ApiError.js";
+import ApiResponse from "../../../utils/apiResponse.js";
+import asyncHandler from "../../../utils/asyncHandler.js";
 
 const createCustomer = asyncHandler(async (req, res) => {
   const newCustomer = await Customer.create(req.body);

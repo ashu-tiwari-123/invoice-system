@@ -1,6 +1,6 @@
 import express from "express";
-import * as productController from "../../controllers/catalog/product.controller.js";
-import authMiddleware from "../../middlewares/auth.js";
+import * as productController from "./product.controller.js";
+import authMiddleware from "../../../middlewares/auth.js";
 
 const router = express.Router();
 router.get("/search", authMiddleware, productController.searchProducts);

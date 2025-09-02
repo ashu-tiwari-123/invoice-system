@@ -1,6 +1,6 @@
 import express from "express";
-import customerRoutes from "./catalog/customer.routes.js";
-import productRoutes from "./catalog/product.routes.js";
+import customerRoutes from "./customers/customer.routes.js";
+import productRoutes from "./products/product.routes.js";
 
 const router = express.Router();
 

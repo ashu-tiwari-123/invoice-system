@@ -311,3 +311,313 @@
 [2025-09-01T15:01:36.502Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
 [2025-09-01T15:01:37.397Z] [32minfo[39m: ✅ MongoDB connected
 [2025-09-01T15:01:37.399Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-01T15:44:30.820Z] [33mwarn[39m: MongoDB disconnected.
+[2025-09-01T15:44:58.546Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-01T15:44:59.223Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-01T15:44:59.225Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T05:51:27.386Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T05:51:28.366Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T05:51:28.368Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T05:53:39.554Z] [32minfo[39m: [0mGET /api/v1/catalog/customers/customers?page=1&limit=5&name=ashu [33m401[0m 31.339 ms - 384[0m
+[2025-09-02T05:55:09.230Z] [32minfo[39m: [0mGET /api/v1/catalog/customers/customers?page=1&limit=5&name=ashu [32m200[0m 108.352 ms - 401[0m
+[2025-09-02T06:30:47.486Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:30:48.327Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:30:48.329Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:33:10.347Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:33:11.874Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:33:12.701Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:33:12.704Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:33:17.598Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:33:18.266Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:33:18.268Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:33:30.219Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:33:30.860Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:33:30.862Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:33:51.667Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:33:52.337Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:33:52.339Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:34:10.607Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:34:11.576Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:34:11.578Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:34:38.440Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:34:39.111Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:34:39.113Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:34:41.558Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:34:42.229Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:34:42.231Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:34:51.281Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:34:51.977Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:34:51.979Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:34:53.177Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:34:53.858Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:34:53.861Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:35:29.324Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:35:30.260Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:35:30.263Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:35:47.987Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:35:48.673Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:35:48.676Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:35:52.282Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:35:52.908Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:35:52.910Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:37:46.023Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:37:46.971Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:37:46.973Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:38:31.453Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:38:32.139Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:38:32.141Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:38:56.298Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:38:57.209Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:38:57.212Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:38:59.889Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:39:00.562Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:39:00.564Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:39:12.290Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:39:13.848Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:39:14.519Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:39:14.522Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:08.135Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:08.999Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:09.001Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:26.270Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:26.976Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:26.978Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:33.120Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:33.816Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:33.819Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:39.275Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:39.991Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:39.993Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:47.533Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:48.211Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:48.213Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:45:57.145Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:45:57.848Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:45:57.850Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:46:01.973Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:46:02.631Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:46:02.633Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:49:21.453Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:49:22.362Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:49:22.364Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:49:27.114Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:49:27.799Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:49:27.802Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:49:32.380Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:49:33.080Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:49:33.082Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:49:37.014Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:49:37.690Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:49:37.692Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:49:39.550Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:49:40.239Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:49:40.241Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:50:46.788Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:50:47.594Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:50:47.596Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:51:07.987Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:51:08.668Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:51:08.671Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:52:44.646Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:52:45.451Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:52:45.453Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:52:49.021Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:52:50.763Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:52:51.483Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:52:51.486Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:53:17.547Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:53:18.219Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:53:18.221Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:53:25.178Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:53:25.871Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:53:25.873Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:53:39.881Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:53:40.684Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:53:40.686Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:53:42.451Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:53:43.125Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:53:43.127Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T06:59:07.082Z] [32minfo[39m: [0mPOST /api/v1/company [33m404[0m 1.795 ms - -[0m
+[2025-09-02T06:59:53.745Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T06:59:54.565Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T06:59:54.567Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:00:07.978Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:00:08.691Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:00:08.694Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:00:18.671Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:00:19.360Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:00:19.363Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:00:21.180Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:00:21.858Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:00:21.860Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:00:24.200Z] [32minfo[39m: [0mPOST /api/v1/company [32m200[0m 48.666 ms - 368[0m
+[2025-09-02T07:05:23.570Z] [32minfo[39m: [0mPOST /api/v1/invoices [33m404[0m 1.813 ms - -[0m
+[2025-09-02T07:06:21.354Z] [32minfo[39m: [0mPOST /api/v1/invoices [33m404[0m 0.309 ms - -[0m
+[2025-09-02T07:08:02.059Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:08:02.938Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:08:02.940Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:08:03.180Z] [32minfo[39m: [0mPOST /api/v1/invoices [33m401[0m 2.500 ms - 384[0m
+[2025-09-02T07:08:13.767Z] [32minfo[39m: [0mPOST /api/v1/company [32m200[0m 47.083 ms - 368[0m
+[2025-09-02T07:08:44.931Z] [32minfo[39m: [0mPOST /api/v1/invoices [33m401[0m 34.204 ms - 384[0m
+[2025-09-02T07:09:16.174Z] [32minfo[39m: [0mPOST /api/v1/invoices [33m400[0m 273.766 ms - -[0m
+[2025-09-02T07:09:49.670Z] [32minfo[39m: [0mGET /api/v1/invoices [32m200[0m 110.862 ms - 86[0m
+[2025-09-02T07:11:03.164Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:11:04.130Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:11:04.132Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:11:05.806Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:11:06.534Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:11:06.536Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:11:25.922Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:11:26.645Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:11:26.647Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:11:27.898Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T07:11:28.595Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T07:11:28.597Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T07:11:31.471Z] [32minfo[39m: [0mPOST /api/v1/invoices [32m201[0m 256.194 ms - 946[0m
+[2025-09-02T07:11:52.088Z] [32minfo[39m: [0mGET /api/v1/invoices [32m200[0m 97.435 ms - 950[0m
+[2025-09-02T08:26:42.823Z] [33mwarn[39m: MongoDB disconnected.
+[2025-09-02T08:31:06.047Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:31:06.912Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:31:06.914Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:32:10.778Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:32:11.667Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:32:11.669Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:32:25.415Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:32:26.137Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:32:26.140Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:32:37.396Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:32:38.097Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:32:38.099Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:19.049Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:19.951Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:19.953Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:23.337Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:24.085Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:24.087Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:28.722Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:29.459Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:29.461Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:35.678Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:36.384Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:36.386Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:39.809Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:40.491Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:40.493Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:46.051Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:46.739Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:46.742Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:51.100Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:51.777Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:51.779Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:33:55.447Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:33:56.124Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:33:56.126Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:34:00.628Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:34:01.325Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:34:01.327Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:34:05.017Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:34:05.713Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:34:05.715Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:34:43.474Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:34:44.283Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:34:44.285Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:34:47.555Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:34:48.249Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:34:48.252Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:35:12.353Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:35:13.063Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:35:13.065Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:35:16.817Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:35:17.529Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:35:17.532Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:35:19.576Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:35:20.311Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:35:20.314Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:35:24.496Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:35:25.245Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:35:25.247Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:38:53.763Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:38:54.604Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:38:54.606Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:39:07.264Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:39:08.026Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:39:08.029Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:40:21.864Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:40:22.758Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:40:22.760Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:40:29.230Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:40:29.991Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:40:29.993Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:40:35.752Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:40:36.430Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:40:36.433Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:44:37.584Z] [32minfo[39m: [0mPOST /api/v1/quotations [33m401[0m 32.453 ms - 384[0m
+[2025-09-02T08:44:57.066Z] [32minfo[39m: [0mPOST /api/v1/quotations [32m201[0m 143.684 ms - 502[0m
+[2025-09-02T08:45:22.208Z] [32minfo[39m: [0mGET /api/v1/quotations [32m200[0m 99.136 ms - 519[0m
+[2025-09-02T08:49:56.477Z] [32minfo[39m: [0mPOST /api/v1/quotations [32m201[0m 115.731 ms - 896[0m
+[2025-09-02T08:50:08.191Z] [32minfo[39m: [0mGET /api/v1/quotations [32m200[0m 98.239 ms - -[0m
+[2025-09-02T08:50:41.328Z] [32minfo[39m: [0mPATCH /api/v1/quotations/68b6afb4463230cce269ecaf/approve [33m404[0m 1.148 ms - -[0m
+[2025-09-02T08:50:59.035Z] [32minfo[39m: [0mPATCH /api/v1/quotations/68b6afb4463230cce269ecaf/approve [33m404[0m 0.432 ms - -[0m
+[2025-09-02T08:51:00.101Z] [32minfo[39m: [0mPATCH /api/v1/quotations/68b6afb4463230cce269ecaf/approve [33m404[0m 0.325 ms - -[0m
+[2025-09-02T08:51:53.306Z] [32minfo[39m: [0mPATCH /api/v1/quotations/68b6ae89463230cce269eca6/approve [33m404[0m 0.443 ms - -[0m
+[2025-09-02T08:52:23.270Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T08:52:24.146Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T08:52:24.148Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T08:52:26.800Z] [32minfo[39m: [0mPATCH /api/v1/quotations/68b6ae89463230cce269eca6/approve [32m200[0m 552.558 ms - 493[0m
+[2025-09-02T09:06:47.736Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:06:54.179Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:06:54.181Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:06:57.498Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:06:58.512Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:06:58.514Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:07:05.242Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:07:30.981Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:07:40.095Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:07:49.838Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:07:50.948Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:07:50.950Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:08:02.201Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:08:02.936Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:08:02.939Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:08:09.460Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:08:10.183Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:08:10.185Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:08:55.094Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:08:55.971Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:08:55.973Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:08.299Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:08.984Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:08.987Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:14.069Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:14.782Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:14.785Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:19.986Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:21.245Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:21.247Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:31.920Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:33.052Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:33.054Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:35.570Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:37.243Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:37.247Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:46.050Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:47.647Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:47.649Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:49.428Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:50.630Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:50.633Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:09:53.299Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:09:54.018Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:09:54.020Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:10:22.703Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:10:24.351Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:10:25.071Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:10:25.073Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:24:58.346Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:24:59.197Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:24:59.199Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:25:01.388Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:25:02.999Z] [32minfo[39m: ✅ Firebase Admin SDK initialized
+[2025-09-02T09:25:03.713Z] [32minfo[39m: ✅ MongoDB connected
+[2025-09-02T09:25:03.715Z] [32minfo[39m: 🚀 Server listening on port 5000 in development mode
+[2025-09-02T09:49:03.331Z] [32minfo[39m: SIGTERM received, shutting down gracefully...

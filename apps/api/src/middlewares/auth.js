@@ -1,6 +1,6 @@
 import { auth as firebaseAuth } from "../config/firebase.js";
 import ApiError from "../utils/ApiError.js";
-import User from "../models/user.schema.js";
+import User from "../modules/users/user.schema.js"
 
 const authMiddleware = async (req, res, next) => {
   const authHeader = req.headers.authorization;

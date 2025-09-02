@@ -1,7 +1,7 @@
-import Product from "../../models/catalog/product.schema.js";
-import ApiError from "../../utils/ApiError.js";
-import ApiResponse from "../../utils/apiResponse.js";
-import asyncHandler from "../../utils/asyncHandler.js";
+import Product from "./product.schema.js";
+import ApiError from "../../../utils/ApiError.js";
+import ApiResponse from "../../../utils/apiResponse.js";
+import asyncHandler from "../../../utils/asyncHandler.js";
 
 const createProduct = asyncHandler(async (req, res) => {
   const newProduct = await Product.create(req.body);
