@@ -20,7 +20,12 @@ const app = express();
 app.use(helmet());
 
 // Enable CORS with whitelisted origins
-app.use(cors(config.corsOptions));
+app.use(
+  cors({
+    origin: "http://localhost:5173", // frontend origin
+    credentials: true, // if you need cookies/auth headers
+  })
+);
 
 // Sanitize user-supplied data to prevent MongoDB operator injection
 app.use(mongoSanitize());

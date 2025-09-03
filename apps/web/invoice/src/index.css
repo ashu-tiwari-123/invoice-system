@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary brand colors */
+  --color-primary: oklch(0.65 0.2 260); /* Indigo/Blue */
+  --color-secondary: oklch(0.75 0.1 130); /* Greenish accent */
+  --color-accent: oklch(0.85 0.25 50); /* Yellow/Orange accent */
+
+  /* Neutral colors */
+  --color-bg: oklch(0.98 0.02 250); /* Light gray background */
+  --color-surface: oklch(1 0 0); /* White */
+  --color-border: oklch(0.85 0.02 250); /* Soft gray */
+  --color-text: oklch(0.15 0.02 250); /* Dark text */
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
