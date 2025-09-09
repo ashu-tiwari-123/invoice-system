@@ -1,66 +1,62 @@
-import { createContext, use, useEffect, useState } from "react";
-import {
-  onAuthStateChanged,
-  signOut,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+// src/context/userContext.jsx
+import { createContext, useContext, useEffect, useState } from "react";
+import { onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import axiosInstance from "../axiosInstance";
+import api from "../axiosInstance";
+import toast from "react-hot-toast";
 
-// 1️⃣ Create Context
-const UserContext = createContext();
+const UserContext = createContext(null);
 
-// 2️⃣ Provider Component
 export function UserProvider({ children }) {
-  const [user, setUser] = useState(null); // backend user
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Listen for Firebase login/logout
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (firebaseUser) {
-        try {
-          const res = await axiosInstance.get("users/me");
-          setUser(res.data);
-        } catch (err) {
-          console.error("Failed to fetch user:", err);
-          setUser(null);
-        }
-      } else {
+    const unsub = onAuthStateChanged(auth, async (fbUser) => {
+      if (!fbUser) {
         setUser(null);
+        setLoading(false);
+        return;
       }
-      setLoading(false);
+      try {
+        const { data } = await api.get("/users/me");
+        setUser(data);
+      } catch (e) {
+        console.error(e);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
     });
-
-    return () => unsubscribe();
+    return () => unsub();
   }, []);
 
-  // Login method (email/password example)
   const login = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password);
-    // Firebase handles token → useEffect will auto fetch backend user
+    const { data } = await api.get("/users/me");
+    setUser(data);
+    toast.success("Logged in successfully! Welcome back.");
   };
 
-  // Logout method
   const logout = async () => {
     await signOut(auth);
     setUser(null);
+    toast.success("Logged out");
   };
 
-  // Update profile method
-  const updateProfile = async (data) => {
-    const res = await axiosInstance.patch("/users/me", data);
-    setUser(res.data);
+  const updateProfile = async (patch) => {
+    const { data } = await api.patch("/users/me", patch);
+    toast.success("Profile updated");
+    setUser(data);
   };
 
   return (
-    <UserContext value={{ user, loading, login, logout, updateProfile }}>
+    <UserContext.Provider value={{ user, loading, login, logout, updateProfile, setUser }}>
       {children}
-    </UserContext>
+    </UserContext.Provider>
   );
 }
 
-// 3️⃣ Custom Hook
 export function useUser() {
-  return use(UserContext);
+  return useContext(UserContext);
 }

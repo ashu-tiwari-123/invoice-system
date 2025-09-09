@@ -65,18 +65,17 @@ function Sidebar() {
       )}
 
       <aside
-        className={`${isDesktopCollapsed ? "w-20" : "w-64"} bg-surface border-r border-border fixed lg:static inset-y-0 left-0 transform ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-all duration-300 ease-in-out z-40 h-screen p-4 shadow-lg lg:shadow-none`}
+        className={`${isDesktopCollapsed ? "w-20" : "w-64"} bg-surface border-r border-border fixed lg:static inset-y-0 left-0 transform ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-all duration-300 ease-in-out z-40  p-4 shadow-lg lg:shadow-none`}
       >
         {/* Mobile close button - positioned at top right */}
 
         {/* Header with toggle button */}
         <div
-          className={`flex items-center justify-${isDesktopCollapsed ? "center" : "between"} mb-6 mt-2`}
+          className={`flex items-center justify-${isDesktopCollapsed ? "center" : "between"} mb-6  ml-2.5`}
         >
           {(!isDesktopCollapsed || isMobileOpen) && (
-            <h2 className="text-2xl font-bold text-primary flex items-center">
-              <HiOfficeBuilding className="mr-2" />
-              IMS
+            <h2 className="text-3xl font-bold flex text-accent items-center">
+              <span className="text-blue-900">BILL</span><span className="text-shadow-white">EZY</span>
             </h2>
           )}
 

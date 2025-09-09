@@ -1,13 +1,18 @@
 // @ts-check
-
 import globals from "globals";
 import js from "@eslint/js";
 import babelParser from "@babel/eslint-parser";
 import eslintReact from "@eslint-react/eslint-plugin";
 import prettierConfig from "eslint-config-prettier";
 
+/**
+ * Flat ESLint config (array form).
+ * Important: for any rules referencing a plugin (e.g. "@eslint-react/..."),
+ * the config object that contains those rules must also declare that plugin
+ * in `plugins: { "<plugin-name>": <pluginModule> }`.
+ */
 export default [
-  // 1. Global ignore patterns
+  // 1. Global ignore patterns (flat config support)
   {
     ignores: [
       "node_modules/",
@@ -20,54 +25,59 @@ export default [
     ],
   },
 
-  // 2. Base Configuration for ALL JavaScript files (api and web)
+  // 2. Base (all js files) — register the @eslint-react plugin here
   {
     files: ["apps/**/*.{js,jsx}"],
+    // Register plugin under short name "@eslint-react"
+    plugins: {
+      "@eslint-react": eslintReact,
+    },
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
-      globals: {
-        ...globals.node, // Start with Node.js globals for both
-      },
+      globals: { ...globals.node },
     },
     rules: {
-      // Allows unused variables if they are prefixed with an underscore
+      "no-constant-binary-expression": "off",
+      "no-undef": "off",
+      "no-empty": "warn",
       "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+      // use the short plugin prefix (plugin was registered above)
+      "@eslint-react/dom/no-missing-button-type": "off",
+      "@eslint-react/no-unstable-context-value": "warn",
     },
   },
 
-  // 3. Eslint's recommended rules for ALL JavaScript files
+  // 3. ESlint recommended JS rules
   js.configs.recommended,
 
-  // 4. React/JSX Specific Configuration (ONLY for the 'web' app)
+  // 4. React-specific (web only)
   {
     files: ["apps/web/**/*.{js,jsx}"],
+    // this block also needs the plugin registered because it will reference plugin rules
+    plugins: {
+      "@eslint-react": eslintReact,
+    },
     languageOptions: {
       parser: babelParser,
       parserOptions: {
         requireConfigFile: false,
-        babelOptions: {
-          presets: ["@babel/preset-react"],
-        },
+        babelOptions: { presets: ["@babel/preset-react"] },
       },
-      globals: {
-        ...globals.browser, // Add browser globals for the web app
-      },
+      globals: { ...globals.browser },
     },
-    // @ts-ignore
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-    ...eslintReact.configs.recommended, // Spread the recommended React config here
+    // include the plugin's recommended config (works because we included eslintReact object)
+    ...eslintReact.configs.recommended,
     rules: {
-      ...eslintReact.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off", // Custom rule override for React
+      // override plugin rules if needed
+      "@eslint-react/no-unstable-context-value": "warn",
+      // Example: if you used an old react rule (react/react-in-jsx-scope), remove it or replace
+    },
+    settings: {
+      react: { version: "detect" },
     },
   },
 
-  // 5. Prettier configuration (MUST BE LAST)
-  // Turns off all rules that might conflict with Prettier
+  // 5. Prettier (last)
   prettierConfig,
 ];

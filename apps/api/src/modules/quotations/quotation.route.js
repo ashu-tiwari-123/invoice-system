@@ -6,13 +6,14 @@ import {
   updateQuotation,
   approveQuotation,
   rejectQuotation,
-  generateQuotationPdf
+  generateQuotationPdf,
+  searchQuotations
 } from "./quotation.controller.js";
 
 import authMiddleware from "../../middlewares/auth.js";
 
 const router = express.Router();
-
+router.get("/quotations/search", authMiddleware, searchQuotations);
 router.get("/", authMiddleware, getAllQuotations);           
 router.post("/", authMiddleware, createQuotation);         
 router.get("/:id", authMiddleware, getQuotationById);       

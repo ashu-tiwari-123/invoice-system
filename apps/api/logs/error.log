@@ -1,3 +1,8 @@
 [2025-09-01T12:22:09.737Z] [31merror[39m: Cannot set property query of #<IncomingMessage> which has only a getter
 [2025-09-01T12:22:47.023Z] [31merror[39m: Cannot set property query of #<IncomingMessage> which has only a getter
 [2025-09-01T13:59:22.927Z] [31merror[39m: Not found
+[2025-09-04T15:00:22.827Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
+[2025-09-04T18:24:49.383Z] [31merror[39m: ❌ MongoDB initial connection failed: querySrv ECONNREFUSED _mongodb._tcp.ims-cluster.vrefaho.mongodb.net
+[2025-09-08T11:56:54.037Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
+[2025-09-09T08:57:26.010Z] [31merror[39m: next is not a function
+[2025-09-09T08:57:31.193Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback

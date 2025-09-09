@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const customColumnSchema = new mongoose.Schema(
   {
-    key: String,         // e.g. "qty100" or "deliveryDate"
-    label: String,       // e.g. "Qty (100)" or "Delivery Date"
+    key: String, // e.g. "qty100" or "deliveryDate"
+    label: String, // e.g. "Qty (100)" or "Delivery Date"
     type: { type: String, default: "string" }, // string, number, date
   },
   { _id: false }
@@ -13,7 +13,7 @@ const quotationItemSchema = new mongoose.Schema(
   {
     sno: Number,
     item: String,
-    columns: mongoose.Schema.Types.Mixed, 
+    columns: mongoose.Schema.Types.Mixed,
     // Example:
     // { qty: 10, price: 50, total: 500 }
     // or { qty100: 480, qty200: 450, qty300: 400 }
@@ -36,15 +36,32 @@ const quotationSchema = new mongoose.Schema(
       phone: String,
       email: String,
     },
-
+    customerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Customer",
+      index: true,
+      required: false,
+    },
+    invoiceNo: {
+      type: String,
+      required: false,
+      index: true,
+    },
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      index: true,
+      required: true,
+    },
     // Customizable table
     customColumns: [customColumnSchema], // defines structure
-    items: [quotationItemSchema],        // stores row data
+    items: [quotationItemSchema], // stores row data
 
-    termsAndConditions: [String],        // flexible T&C list
+    termsAndConditions: { type: [String], default: [] }, // flexible T&C list
     notes: String,
 
     total: Number,
+    sendPerRow: { type: Boolean, default: false },
 
     status: {
       type: String,
@@ -63,8 +80,8 @@ const quotationSchema = new mongoose.Schema(
 
     auditLogs: [
       {
-        action: String, 
-        user: String,  // Firebase UID
+        action: String,
+        user: String, // Firebase UID
         timestamp: { type: Date, default: Date.now },
         changes: Object,
       },
@@ -72,5 +89,5 @@ const quotationSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
+quotationSchema.index({ companyId: 1, quotationNo: 1 }, { unique: true });
 export default mongoose.model("Quotation", quotationSchema);

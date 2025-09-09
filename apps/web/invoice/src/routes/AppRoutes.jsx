@@ -1,60 +1,73 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "../pages/Login";
+import Layout from "../layout/Layout";
 import Dashboard from "../pages/Dashboard";
-import PrivateRoute from "./PrivateRoutes";
-import { useUser } from "../context/userContext.jsx";
-import Layout from "../layout/Layout.jsx";
+import Company from "../pages/company/Company";
+import { useUser } from "../context/userContext";
+import Profile from './../pages/Profile';
+import UpdateCompany from "../pages/company/UpdateCompany";
+import Invoices from "../pages/invoices/invoices";
+import InvoiceView from "../pages/invoices/InvoiceView";
+import Quotation from "../pages/quotations/quotation";
+import QuotationView from "../pages/quotations/QuotationView";
+import Customer from './../pages/customers/Customer';
+import Products from "../pages/products/Products";
 
-function FallbackRoute() {
+const Private = ({ children }) => {
   const { user, loading } = useUser();
+  if (loading) return null;
+  if (!user) return <Navigate to="/login" replace />;
+  return children;
+};
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        Loading...
-      </div>
-    );
+const NeedsCompany = ({ children }) => {
+  const { user, loading } = useUser();
+  if (loading) return null;
+  if (!user) return <Navigate to="/login" replace />;
+  if (user.needsCompanyLink && !location.pathname.startsWith("/company")) {
+    return <Navigate to="/company" replace />;
   }
-
-  return user ? (
-    <Navigate to="/dashboard" replace />
-  ) : (
-    <Navigate to="/login" replace />
-  );
-}
+  return children;
+};
 
 export default function AppRoutes() {
+  const { user } = useUser();
+
   return (
     <Router>
       <Routes>
-        {/* Public */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={user ? <Navigate to="/" replace /> : <Login />} />
 
-        {/* Protected */}
+        <Route
+          path="/company"
+          element={
+            <Private>
+              <Company />
+            </Private>
+          }
+        />
+
         <Route
           element={
-            <PrivateRoute>
-              <Layout />
-            </PrivateRoute>
+            <Private>
+              <NeedsCompany>
+                <Layout />
+              </NeedsCompany>
+            </Private>
           }
         >
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/invoices" element={<h2>Invoice Page</h2>} />
-          <Route path="/quotations" element={<h2>Quotations Page</h2>} />
-          <Route path="/customers" element={<h2>Customers Page</h2>} />
-          <Route path="/products" element={<h2>Products Page</h2>} />
-          <Route path="/purchases" element={<h2>Purchases Page</h2>} />
-          <Route path="/expenses" element={<h2>Expenses Page</h2>} />
-          <Route path="/reports" element={<h2>Reports Page</h2>} />
-          <Route path="/company" element={<h2>Company Page</h2>} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/up-company" element={<UpdateCompany />} />
+          <Route path="/invoices" element={<Invoices />} />
+          <Route path="/invoices-view/:id" element={<InvoiceView />} />
+          <Route path="/quotations" element={<Quotation />} />
+          <Route path="/quotation-view/:id" element={<QuotationView />} />
+          <Route path="/customers" element={<Customer />} />
+          <Route path="/products" element={<Products />} />
         </Route>
-        {/* Catch-all */}
-        <Route path="*" element={<FallbackRoute />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

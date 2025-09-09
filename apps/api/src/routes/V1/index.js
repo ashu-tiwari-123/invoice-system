@@ -6,7 +6,9 @@ import company from "../../modules/company/company.routes.js";
 import quotation from "../../modules/quotations/quotation.route.js";
 import expense from "../../modules/expenses/expenses.routes.js";
 import purchase from "../../modules/purchase/purchase.routes.js";
-import report from "../../modules/reports/reports.routes.js"
+import report from "../../modules/reports/reports.routes.js";
+import pdf from "../../modules/invoices/invoice.pdf.routes.js";
+import quote from "../../modules/quotations/quotation.pdf.route.js";
 
 const router = express.Router();
 
@@ -42,6 +44,14 @@ const defaultRoutes = [
   {
     path: "/reports",
     route: report,
+  },
+  {
+    path: "/create-pdf",
+    route: pdf,
+  },
+  {
+    path: "/create-quote",
+    route: quote,
   },
 ];
 

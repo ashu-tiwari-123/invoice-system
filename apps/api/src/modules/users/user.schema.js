@@ -28,6 +28,16 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    photoURL: {
+      type: String,
+      trim: true,
+    },
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      index: true,
+      required: false,
+    },
   },
   {
     timestamps: true,

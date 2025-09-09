@@ -21,6 +21,14 @@ const purchaseRecordSchema = new mongoose.Schema(
       ref: "Invoice",
       required: true,
     },
+    // src/modules/purchase/purchase.schema.js
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      index: true,
+      required: true,
+    },
+
     purchases: [purchaseSchema],
     totalPurchaseCost: { type: Number, default: 0 },
     createdBy: String, // Firebase UID

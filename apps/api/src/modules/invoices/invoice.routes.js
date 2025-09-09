@@ -19,9 +19,9 @@ router.get("/", authMiddleware, getAllInvoices);
 router.post("/", authMiddleware, createInvoice);
 router.get("/:id", authMiddleware, getInvoiceById);
 router.patch("/:id", authMiddleware, updateInvoice);
-router.post("/:id/approve", authMiddleware, approveInvoice);
-router.post("/:id/mark-paid", authMiddleware, markInvoicePaid);
-router.post("/:id/void", authMiddleware, voidInvoice);
+router.patch("/:id/approve", authMiddleware, approveInvoice);
+router.patch("/:id/mark-paid", authMiddleware, markInvoicePaid);
+router.patch("/:id/void", authMiddleware, voidInvoice);
 router.post("/:id/generate-pdf", authMiddleware, generatePdfSnapshot);
 
 export default router;

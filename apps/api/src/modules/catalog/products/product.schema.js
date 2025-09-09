@@ -15,7 +15,6 @@ const productSchema = new mongoose.Schema(
     },
     purchasePrice: {
       type: Number,
-      required: true,
       min: 0,
     },
     sellPrice: {
@@ -33,16 +32,24 @@ const productSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      index: true,
+      required: true,
+    },
   },
   { timestamps: true }
 );
 
-productSchema.index({ name: 1, hsn: 1 });
+// Indexes
+productSchema.index({ companyId: 1, name: 1 }, { unique: true });
+productSchema.index({ companyId: 1, hsn: 1 });
 
+// Only fetch active products
 productSchema.pre(/^find/, function (next) {
   this.where({ isActive: { $ne: false } });
   next();
 });
 
-const Product = mongoose.model("Product", productSchema);
-export default Product;
+export default mongoose.model("Product", productSchema);

@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom";
 import { useUser } from "../context/userContext.jsx";
+import Loading from "../utils/Loading.jsx";
 
 export default function PrivateRoute({ children }) {
   const { user, loading } = useUser();
@@ -7,7 +8,7 @@ export default function PrivateRoute({ children }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        Loading...
+        <Loading />
       </div>
     );
   }

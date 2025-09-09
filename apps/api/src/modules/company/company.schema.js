@@ -4,6 +4,7 @@ const companySchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     gstin: { type: String, required: true, unique: true },
+    owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, // 👈 link company to a user
     pan: String,
     address: String,
     state: String,

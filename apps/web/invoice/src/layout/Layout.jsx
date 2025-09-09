@@ -1,8 +1,22 @@
+import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
-import { Outlet } from "react-router-dom";
+import Loading from "../utils/Loading";
 
 function Layout() {
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 700);
+
+    return () => clearTimeout(timeout);
+  }, [location]);
+
   return (
     <div className="flex bg-bg min-h-screen">
       {/* Sidebar */}
@@ -12,7 +26,7 @@ function Layout() {
       <div className="flex flex-col flex-1 lg:ml-0">
         <Topbar />
         <main className="flex-1 overflow-y-auto p-4 md:p-6">
-          <Outlet />
+          {loading ? <Loading /> : <Outlet />}
         </main>
       </div>
     </div>

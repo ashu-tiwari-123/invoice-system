@@ -3,119 +3,93 @@ import ApiError from "../../../utils/ApiError.js";
 import ApiResponse from "../../../utils/apiResponse.js";
 import asyncHandler from "../../../utils/asyncHandler.js";
 
+// Create product
 const createProduct = asyncHandler(async (req, res) => {
-  const newProduct = await Product.create(req.body);
-  if (!newProduct) {
-    throw new ApiError(500, "Something went wrong while creating the product.");
-  }
-  return res
-    .status(201)
-    .json(new ApiResponse(201, newProduct, "Product created successfully."));
+  const product = await Product.create({
+    ...req.body,
+    companyId: req.user.companyId,
+  });
+  if (!product) throw new ApiError(500, "Failed to create product");
+  return res.status(201).json(new ApiResponse(201, product, "Product created"));
 });
 
+// Get single product
 const getProductById = asyncHandler(async (req, res) => {
-  const product = await Product.findById(req.params.id);
-  if (!product) {
-    throw new ApiError(404, "Product not found.");
-  }
-  return res
-    .status(200)
-    .json(new ApiResponse(200, product, "Product fetched successfully."));
+  const product = await Product.findOne({
+    _id: req.params.id,
+    companyId: req.user.companyId,
+  });
+  if (!product) throw new ApiError(404, "Product not found");
+  return res.status(200).json(new ApiResponse(200, product));
 });
 
+// Get paginated + filtered products
 const getAllProducts = asyncHandler(async (req, res) => {
   const {
     page = 1,
-    limit = 10,
+    limit = 20,
     sortBy = "createdAt",
     sortOrder = "desc",
-    name,
-    hsn,
+    ...filters
   } = req.query;
 
-  const filterQuery = { isActive: true };
-  if (name) filterQuery.name = { $regex: name, $options: "i" };
-  if (hsn) filterQuery.hsn = { $regex: hsn, $options: "i" };
+  const filterQuery = { companyId: req.user.companyId };
 
-  const options = {
-    page: parseInt(page, 10),
-    limit: parseInt(limit, 10),
-    sort: { [sortBy]: sortOrder === "asc" ? 1 : -1 },
-  };
+  if (filters.name) filterQuery.name = { $regex: filters.name, $options: "i" };
+  if (filters.hsn) filterQuery.hsn = { $regex: filters.hsn, $options: "i" };
 
   const products = await Product.find(filterQuery)
-    .sort(options.sort)
-    .skip((options.page - 1) * options.limit)
-    .limit(options.limit);
+    .skip((page - 1) * limit)
+    .limit(Number(limit))
+    .sort({ [sortBy]: sortOrder === "asc" ? 1 : -1 });
 
-  const totalProducts = await Product.countDocuments(filterQuery);
+  const total = await Product.countDocuments(filterQuery);
 
-  const response = {
-    docs: products,
-    totalDocs: totalProducts,
-    limit: options.limit,
-    page: options.page,
-    totalPages: Math.ceil(totalProducts / options.limit),
-  };
-
-  return res
-    .status(200)
-    .json(new ApiResponse(200, response, "Products retrieved successfully."));
+  return res.status(200).json(
+    new ApiResponse(200, {
+      products,
+      total,
+      page: Number(page),
+      limit: Number(limit),
+    })
+  );
 });
 
+// Update product
 const updateProduct = asyncHandler(async (req, res) => {
-  const updatedProduct = await Product.findByIdAndUpdate(
-    req.params.id,
+  const updated = await Product.findOneAndUpdate(
+    { _id: req.params.id, companyId: req.user.companyId },
     { $set: req.body },
     { new: true, runValidators: true }
   );
-  if (!updatedProduct) {
-    throw new ApiError(404, "Product not found.");
-  }
-  return res
-    .status(200)
-    .json(
-      new ApiResponse(200, updatedProduct, "Product updated successfully.")
-    );
+  if (!updated) throw new ApiError(404, "Product not found");
+  return res.status(200).json(new ApiResponse(200, updated, "Product updated"));
 });
 
+// Soft delete product
 const deleteProduct = asyncHandler(async (req, res) => {
-  const product = await Product.findByIdAndUpdate(
-    req.params.id,
-    { $set: { isActive: false } },
+  const deleted = await Product.findOneAndUpdate(
+    { _id: req.params.id, companyId: req.user.companyId },
+    { $set: { isActive: false } }, // soft delete
     { new: true }
   );
-  if (!product) {
-    throw new ApiError(404, "Product not found.");
-  }
-  return res
-    .status(200)
-    .json(
-      new ApiResponse(
-        200,
-        { id: product._id },
-        "Product disabled successfully."
-      )
-    );
+  if (!deleted) throw new ApiError(404, "Product not found");
+  return res.status(200).json(new ApiResponse(200, deleted, "Product deleted"));
 });
 
+// Search products (for autocomplete in quotations/invoices)
 const searchProducts = asyncHandler(async (req, res) => {
   const { q } = req.query;
-  if (!q) {
-    throw new ApiError(400, "Search query 'q' is required.");
-  }
+  if (!q) return res.status(200).json(new ApiResponse(200, []));
 
-  const searchQuery = { $regex: q, $options: "i" };
+  const regex = { $regex: q, $options: "i" };
 
   const products = await Product.find({
-    $or: [{ name: searchQuery }, { hsn: searchQuery }],
+    companyId: req.user.companyId,
+    $or: [{ name: regex }, { hsn: regex }],
   })
-    .limit(10)
-    .select("_id name sellPrice gstTax hsn");
-
-  if (!products.length) {
-    return res.status(200).json(new ApiResponse(200, [], "No products found."));
-  }
+    .limit(20)
+    .sort({ createdAt: -1 });
 
   return res
     .status(200)

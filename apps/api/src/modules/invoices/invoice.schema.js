@@ -20,7 +20,9 @@ const pdfSnapshotSchema = new mongoose.Schema(
   {
     version: Number,
     pdfUrl: String,
+    // Keep original ref and ALSO allow uid
     generatedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    generatedByUid: String,
     generatedAt: { type: Date, default: Date.now },
     note: String,
   },
@@ -29,7 +31,19 @@ const pdfSnapshotSchema = new mongoose.Schema(
 
 const invoiceSchema = new mongoose.Schema(
   {
-    // 🔹 Seller Info
+    // 🔹 Tenant
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      index: true,
+    },
+    customer: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Customer",
+      index: true,
+    },
+
+    // 🔹 Seller Info (snapshot)
     seller: {
       companyName: String,
       gstin: String,
@@ -43,21 +57,21 @@ const invoiceSchema = new mongoose.Schema(
       accountNumber: String,
       ifsc: String,
       branch: String,
+      name: String,
     },
 
     // 🔹 Invoice Metadata
-    invoiceNo: { type: String, required: true, unique: true },
+    invoiceNo: { type: String, required: true },
     invoiceDate: { type: Date, default: Date.now },
     invoiceType: {
       type: String,
       enum: [
-        "Tax Invoice",
         "Proforma Invoice",
         "Delivery Challan",
         "Original for Buyer",
         "Duplicate for Transporter",
       ],
-      default: "Tax Invoice",
+      default: "Original for Buyer",
     },
     poNo: String,
     placeOfSupply: String,
@@ -84,6 +98,7 @@ const invoiceSchema = new mongoose.Schema(
       state: String,
       stateCode: String,
       phone: String,
+      gstin: String,
     },
 
     // 🔹 Items
@@ -111,7 +126,7 @@ const invoiceSchema = new mongoose.Schema(
     taxSummary: [taxBreakupSchema],
 
     // 🔹 Totals
-    taxableValue: Number,
+    taxableValue: Number, // (aka subtotal)
     totalCgst: Number,
     totalSgst: Number,
     totalIgst: Number,
@@ -133,10 +148,12 @@ const invoiceSchema = new mongoose.Schema(
     pdfSnapshots: [pdfSnapshotSchema],
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    createdByUid: String,
+    updatedByUid: String,
     auditLogs: [
       {
         action: String,
-        user: String, // store Firebase UID directly
+        user: String, // Firebase UID (keep as you had)
         timestamp: { type: Date, default: Date.now },
         changes: Object,
       },
@@ -144,5 +161,8 @@ const invoiceSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+// 🔹 Ensure invoiceNo uniqueness within a company
+invoiceSchema.index({ companyId: 1, invoiceNo: 1 }, { unique: true });
 
 export default mongoose.model("Invoice", invoiceSchema);

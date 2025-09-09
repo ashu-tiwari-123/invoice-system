@@ -6,18 +6,25 @@ export const getOrCreateCurrentUser = async (req, res, next) => {
     const { uid, email, name } = req.user;
 
     let user = await User.findOne({ firebaseUid: uid });
+    let created = false;
+
     if (!user) {
       user = new User({
         firebaseUid: uid,
-        email: email,
-        displayName: name || email.split("@")[0],
+        email,
+        displayName: name || (email ? email.split("@")[0] : "User"),
       });
       await user.save();
-      return res.status(201).json(user);
+      created = true;
     }
+
     user.lastLogin = new Date();
     await user.save();
-    res.status(200).json(user);
+
+    const payload = user.toObject();
+    payload.needsCompanyLink = !user.companyId;
+
+    res.status(created ? 201 : 200).json(payload);
   } catch (error) {
     next(error);
   }
@@ -37,6 +44,9 @@ export const updateCurrentUser = async (req, res, next) => {
     }
     if (phoneNumber !== undefined) {
       user.phoneNumber = phoneNumber;
+    }
+    if (req.body.photoURL !== undefined) {
+      user.photoURL = req.body.photoURL;
     }
 
     const updatedUser = await user.save();
