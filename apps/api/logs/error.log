@@ -6,3 +6,6 @@
 [2025-09-08T11:56:54.037Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
 [2025-09-09T08:57:26.010Z] [31merror[39m: next is not a function
 [2025-09-09T08:57:31.193Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
+[2025-09-10T11:38:46.922Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
+[2025-09-10T12:01:18.831Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback
+[2025-09-10T13:43:57.326Z] [31merror[39m: Connection.prototype.close() no longer accepts a callback

@@ -22,7 +22,7 @@ export default function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [viewingProduct, setViewingProduct] = useState(null);
   const [viewMode, setViewMode] = useState("grid"); // 'grid' or 'list'
-  const limit = 10;
+  const limit = 8;
 
   useEffect(() => {
     fetchProducts();
@@ -158,7 +158,7 @@ export default function Products() {
   };
 
   return (
-    <div className=" p-4 md:p-6 ">
+    <div className="">
       {/* Header */}
       <div className="mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

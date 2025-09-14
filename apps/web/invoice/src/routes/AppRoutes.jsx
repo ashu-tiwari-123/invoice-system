@@ -12,6 +12,9 @@ import Quotation from "../pages/quotations/quotation";
 import QuotationView from "../pages/quotations/QuotationView";
 import Customer from './../pages/customers/Customer';
 import Products from "../pages/products/Products";
+import Purchases from "../pages/purchases/Purchases";
+import Expenses from "../pages/expenses/Expenses";
+import ReportsPage from "../pages/reports/Reports";
 
 const Private = ({ children }) => {
   const { user, loading } = useUser();
@@ -65,6 +68,9 @@ export default function AppRoutes() {
           <Route path="/quotation-view/:id" element={<QuotationView />} />
           <Route path="/customers" element={<Customer />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/purchases" element={<Purchases />} />
+          <Route path="/expenses" element={<Expenses />} />
+          <Route path="/reports" element={<ReportsPage />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -18,16 +18,19 @@ function Layout() {
   }, [location]);
 
   return (
-    <div className="flex bg-bg min-h-screen">
+    <div className="flex bg-bg h-screen">
       {/* Sidebar */}
       <Sidebar />
 
-      {/* Main Content */}
-      <div className="flex flex-col flex-1 lg:ml-0">
+      {/* Main Content Area */}
+      <div className="flex flex-col flex-1">
+        {/* Fixed Topbar */}
         <Topbar />
-        <main className="flex-1 overflow-y-auto p-4 md:p-6">
+
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto p-4 md:p-6">
           {loading ? <Loading /> : <Outlet />}
-        </main>
+        </div>
       </div>
     </div>
   );
